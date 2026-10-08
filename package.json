@@ -11,7 +11,8 @@
     "lint:js": "eslint src/js/**/*.js",
     "lint:scss": "stylelint \"src/scss/**/*.scss\"",
     "lint:fix": "eslint src/js/**/*.js --fix && stylelint \"src/scss/**/*.scss\" --fix",
-    "analyze": "gulp analyze"
+    "analyze": "gulp analyze",
+    "prepare": "husky"
   },
   "keywords": [
     "gulp",
@@ -23,6 +24,15 @@
   ],
   "author": "Timur Vetrov <https://github.com/VetrovTimur>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VetrovTimur/gulp-starter-public.git"
+  },
+  "homepage": "https://github.com/VetrovTimur/gulp-starter-public#readme",
+  "lint-staged": {
+    "src/js/**/*.js": "eslint --fix",
+    "src/scss/**/*.scss": "stylelint --fix"
+  },
   "type": "commonjs",
   "devDependencies": {
     "browser-sync": "^3.0.4",
@@ -51,6 +61,8 @@
     "gulp-svg-sprite": "^2.0.3",
     "gulp-svgo": "^3.0.1",
     "html-validate": "^11.16.2",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
     "sass": "^1.105.1",
     "stylelint": "^17.16.0",
     "stylelint-config-standard-scss": "^17.0.0",
