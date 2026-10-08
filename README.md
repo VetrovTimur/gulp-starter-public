@@ -47,6 +47,16 @@ dist/            Dev-сборка
 build/           Prod-сборка
 ```
 
+## Разработка
+
+### Pre-commit hooks
+
+Перед каждым `git commit` автоматически запускаются линтеры на изменённых файлах (через `husky` + `lint-staged`). Если есть ошибки — коммит не проходит.
+
+Чтобы обойти проверку (не рекомендуется):
+```bash
+git commit --no-verify -m "message"
+
 ## Возможности
 
 - **HTML:** инклюды, минификация, автоматическая генерация `<picture>` и inline SVG
@@ -59,6 +69,7 @@ build/           Prod-сборка
 - **Critical CSS:** два режима — manual (маркеры) и auto (Puppeteer)
 - **SEO:** OG-теги, Schema.org, sitemap.xml, robots.txt
 - **Линтеры:** ESLint, Stylelint, html-validate
+- **Pre-commit hooks:** автоматическая проверка кода перед коммитом
 - **Prod:** хэширование имён файлов, минификация, без sourcemaps
 
 ## Конфигурация
